@@ -1,10 +1,7 @@
 package pl.pjatk.makrz.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.pjatk.makrz.model.Movie;
 import pl.pjatk.makrz.service.MovieService;
 
@@ -27,5 +24,10 @@ public class MovieController {
     @GetMapping("/{id}")
     public ResponseEntity<Movie> findMovie(@PathVariable long id){
         return ResponseEntity.ok(movieService.findById(id));
+    }
+
+    @PostMapping
+    public ResponseEntity<Movie> addMovie(@RequestBody Movie movie){
+        return ResponseEntity.ok(movieService.addMovie(movie));
     }
 }

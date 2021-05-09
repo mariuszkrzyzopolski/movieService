@@ -17,4 +17,8 @@ public class MovieService {
         return new Movie(id,Category.Dramat,"nowy",new Date(),4);
     }
 
+    public Movie addMovie(Movie movie){
+        return movie;
+    }
+
 }
