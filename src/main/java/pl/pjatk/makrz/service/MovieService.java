@@ -12,4 +12,9 @@ public class MovieService {
     public List<Movie> findAll(){
         return List.of(new Movie(1L, Category.Akcja,"testowy",new Date(),5));
     }
+
+    public Movie findById(long id){
+        return new Movie(id,Category.Dramat,"nowy",new Date(),4);
+    }
+
 }
