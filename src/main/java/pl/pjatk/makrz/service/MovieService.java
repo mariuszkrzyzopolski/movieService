@@ -21,4 +21,8 @@ public class MovieService {
         return movie;
     }
 
+    public Movie updateMovie(long id,Movie movie){
+        return movie;
+    }
+
 }
